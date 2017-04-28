@@ -42,7 +42,7 @@ class MainActivity : KodeinAppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
 
-        if (isFinishing) subscriptions.clear()
+        subscriptions.clear()
     }
 
     private fun addContent(recyclerBinder: RecyclerBinder, context: ComponentContext) {
