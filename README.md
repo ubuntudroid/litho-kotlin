@@ -1,5 +1,5 @@
 # litho-kotlin
-A simple project showing how to set up an Android project to work with Kotlin AND Litho.
+A simple project showing how to set up an Android project to work with Kotlin AND Facebook's [Litho](http://fblitho.com/).
 
 ## Gist
 Apart from the regular Kotlin and Litho setup two changes are important:
