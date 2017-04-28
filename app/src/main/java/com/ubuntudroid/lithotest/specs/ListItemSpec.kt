@@ -9,9 +9,6 @@ import com.facebook.litho.annotations.OnCreateLayout
 import com.facebook.litho.widget.Text
 import com.facebook.yoga.YogaEdge
 
-/**
- * Created by ubuntudroid on 28.04.17.
- */
 @LayoutSpec
 class ListItemSpec {
 
