@@ -1,6 +1,8 @@
 # litho-kotlin
 A simple project showing how to set up an Android project to work with Kotlin AND Facebook's [Litho](http://fblitho.com/).
 
+Check out the [litho-retrofit branch](https://github.com/ubuntudroid/litho-kotlin/tree/litho-retrofit) for a more advanced example showing how to load a webservice response into a Recycler using RxJava and Retrofit.
+
 ## Gist
 Apart from the regular Kotlin and Litho setup two changes are important:
 
