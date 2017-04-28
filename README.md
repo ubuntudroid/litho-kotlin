@@ -1,59 +1,7 @@
-# litho-kotlin
-A simple project showing how to set up an Android project to work with Kotlin AND Facebook's [Litho](http://fblitho.com/).
+# litho-retrofit
+An expanded version of the base app to show how to dynamically push data loaded with Retrofit into a Litho Recycler by means of RxJava.
 
-## Gist
-Apart from the regular Kotlin and Litho setup two changes are important:
-
-In your app module's `build.gradle`:
-
-```kotlin
-apply plugin: 'kotlin-kapt'
-
-dependencies {
-...
-
-  def lithoVersion = '0.2.0'
-  compile "com.facebook.litho:litho-core:$lithoVersion"
-  compile "com.facebook.litho:litho-widget:$lithoVersion"
-  provided "com.facebook.litho:litho-annotations:$lithoVersion"
-  kapt "com.facebook.litho:litho-annotations:$lithoVersion" // in addition(!) to the "provided" line
-  kapt "com.facebook.litho:litho-processor:$lithoVersion" // kapt instead of annotationprocessor or apt
-  compile "com.facebook.soloader:soloader:$lithoVersion"
-  debugCompile "com.facebook.litho:litho-stetho:$lithoVersion"
-  compile "com.facebook.litho:litho-fresco:$lithoVersion"
-  testCompile("com.facebook.litho:litho-testing:$lithoVersion") {
-      exclude group: 'com.google.code.findbugs'
-  }
-}
-```
-    
-In your Litho component specs (thanks to [@grandstaish](https://github.com/grandstaish) for the `@JvmStatic` hint):
-
-```kotlin
-@LayoutSpec
-class ListItemSpec { // no object!!!
-
-  companion object {
-
-      @JvmStatic // important!!!
-      @OnCreateLayout
-      fun onCreateLayout(context: ComponentContext): ComponentLayout = Column.create(context)
-              .paddingDip(YogaEdge.ALL, 16)
-              .backgroundColor(Color.WHITE)
-              .child(
-                      Text.create(context)
-                              .text("Hello world")
-                              .textSizeSp(40f)
-              )
-              .child(
-                      Text.create(context)
-                              .text("Litho tutorial")
-                              .textSizeSp(20f)
-              )
-              .build()
-  }
-}
-```
+DI is done using [Kodein](https://github.com/SalomonBrys/Kodein).
 
 ## License
 ```
