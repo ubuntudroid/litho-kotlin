@@ -2,7 +2,7 @@
 A simple project showing how to set up an Android project to work with Kotlin AND Litho.
 
 ## Gist
-Apart from the default Kotlin and Litho setup two changes are important:
+Apart from the regular Kotlin and Litho setup two changes are important:
 
 In your app module's `build.gradle`:
 
